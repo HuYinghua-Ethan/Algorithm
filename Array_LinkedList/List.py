@@ -71,6 +71,9 @@ class MyList:
         """列表扩容"""
         self._arr = self._arr + [0] * self.capacity() * (self._extend_ratio - 1)
         self._capacity = len(self._arr)
+    def to_array(self) -> list[int]:
+        """返回有效长度的列表"""
+        return self._arr[: self._size]
 
 
 """Driver Code"""
